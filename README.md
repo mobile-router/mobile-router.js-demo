@@ -1,6 +1,6 @@
 # mobile-router.js-demo
 
-This is an easy mobile web app demo of [mobile-router.js](https://github.com/dolymood/mobile-router.js).
+This is a simple mobile web app demo of [mobile-router.js](https://github.com/dolymood/mobile-router.js).
 
 ## How can i see it?
 
