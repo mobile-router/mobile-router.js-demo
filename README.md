@@ -15,3 +15,7 @@ This is a simple mobile web app demo of [mobile-router.js](https://github.com/do
 	npm start
 
 Now you can see it `http://127.0.0.1:3000`.
+
+![list](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/list.png)
+
+![detail](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/detail.png)
