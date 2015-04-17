@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title M — Lightweight single page bone for mobile web App.轻量级web端单页面骨架
+    //- 移动设备初始缩放为适应屏幕
+    meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no")
+    //- 允许全屏模式
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    //- 设置状态栏颜色
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    //- 主屏标题
+    meta(name="apple-mobile-web-app-title" content="mobile-router.js demo")
+    //- 忽略自动识别电话号码
+    meta(content="telephone=no" name="format-detection")
+    //- 忽略识别邮箱
+    meta(content="email=no" name="format-detection")
+    //- 智能 app 广告条
+    //- meta(name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL") 
+
+    //- 针对手持设备优化，主要是针对一些老的不识别 viewport 的浏览器，比如黑莓
+    //- meta(name="HandheldFriendly" content="true")
+    //- 微软的老式浏览器
+    //- meta(name="MobileOptimized" content="320")
+    //- uc 强制竖屏
+    meta(name="screen-orientation" content="portrait")
+    //- QQ 强制竖屏
+    meta(name="x5-orientation" content="portrait")
+    //- UC 强制全屏
+    //- meta(name="full-screen" content="yes")
+    //- QQ 强制全屏
+    //- meta(name="x5-fullscreen" content="true")
+    //- UC 应用模式
+    meta(name="browsermode" content="application")
+    //- QQ 应用模式
+    meta(name="x5-page-mode" content="app")
+    //- windows phone 点击无高光
+    //- meta(name="msapplication-tap-highlight" content="no")
+    //- 避免百度这样的玩意转码
+    meta(http-equiv="Cache-Control" content="no-siteapp")
+    
+    link(rel='stylesheet', href='/stylesheets/m.css')
+    link(rel='stylesheet', href='/stylesheets/m.animate.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(data-main="/javascripts/app/main" src="/javascripts/lib/require.js")
+  body
+    .pages
+      block content

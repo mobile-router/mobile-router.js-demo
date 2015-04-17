@@ -1,0 +1,17 @@
+header.page-header
+	h3.title 列表页
+.page-body
+	.files
+		dl
+			dt.files-head
+				ul
+					li.id ID
+					li.name NAME
+					li.size SIZE
+			each item in data
+				dd.file
+					ul
+						li.id= item.id
+						li.name
+							a(href="/detail/" + item.id)= item.name
+						li.size= item.size

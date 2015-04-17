@@ -1,0 +1,57 @@
+[
+	{
+		"id": "1",
+		"name": "file 1",
+		"size": "10KB"
+	},
+	{
+		"id": "2",
+		"name": "file 2",
+		"size": "20KB"
+	},
+	{
+		"id": "3",
+		"name": "file 3",
+		"size": "50KB"
+	},
+	{
+		"id": "4",
+		"name": "file 4",
+		"size": "200KB"
+	},
+	{
+		"id": "5",
+		"name": "file 5",
+		"size": "2KB"
+	},
+	{
+		"id": "6",
+		"name": "file 6",
+		"size": "60KB"
+	},
+	{
+		"id": "7",
+		"name": "file 7",
+		"size": "2MB"
+	},
+	{
+		"id": "8",
+		"name": "file 8",
+		"size": "20B"
+	},
+	{
+		"id": "9",
+		"name": "file 9",
+		"size": "20GB"
+	},
+	{
+		"id": "10",
+		"name": "file 10",
+		"size": "200MB"
+	},
+	{
+		"id": "11",
+		"name": "file 11",
+		"size": "20KB"
+	}
+]
