@@ -10,6 +10,8 @@ This is a simple mobile web app demo of [mobile-router.js](https://github.com/do
 
 2) Run it:
 	
+	cd mobile-router.js-demo
+	npm install
 	npm start
 
 Now you can see it `http://127.0.0.1:3000`.
