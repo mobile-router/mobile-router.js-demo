@@ -1,7 +1,7 @@
 require.config({
   baseUrl: '/javascripts/app/',
   paths: {
-    'm.router': '/javascripts/lib/m.min',
+    'm.router': 'http://demo.aijc.net/js/M/build/m.min',
     'jade': '/javascripts/lib/jade',
     'zepto': '/javascripts/lib/zepto.min',
     'fastclick': '/javascripts/lib/fastclick.min'
