@@ -16,6 +16,8 @@ This is a simple mobile web app demo for [mobile-router.js](https://github.com/d
 
 Now you can see it `http://127.0.0.1:3000`.
 
-![list](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/list.png)
+![contacts](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/contacts.png)
 
 ![detail](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/detail.png)
+
+![edit](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/edit.png)
