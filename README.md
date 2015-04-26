@@ -2,6 +2,8 @@
 
 This is a simple mobile web app demo for [mobile-router.js](https://github.com/dolymood/mobile-router.js).
 
+[Online Demo](http://mr.aijc.net)
+
 ## How can i see it?
 
 1) Get it:
