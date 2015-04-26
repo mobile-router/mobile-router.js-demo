@@ -4,6 +4,8 @@ This is a simple mobile web app demo for [mobile-router.js](https://github.com/d
 
 [Online Demo](http://mr.aijc.net)
 
+![Online Demo](https://github.com/dolymood/mobile-router.js-demo/raw/master/fakeData/QR.png)
+
 ## How can i see it?
 
 1) Get it:
