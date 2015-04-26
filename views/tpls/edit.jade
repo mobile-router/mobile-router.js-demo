@@ -1,0 +1,17 @@
+header.page-header
+	h3.title Edit
+	a.btn-left(
+		href="/detail/" + data.id
+		data-rel="back"
+		) Cancel
+	a.btn-right(href="javascript:;") Done
+.page-body
+	.file-detail.file-edit
+		ul
+			li.head NAME
+			li.body
+				input.txt(name="name" value=data.name)
+		ul
+			li.head NUMBER
+			li.body
+				input.txt(type="number" name="number" value=data.number)

@@ -1,17 +1,15 @@
 header.page-header
-	h3.title List
+	h3.title Contacts
 .page-body
 	.files
 		dl
 			dt.files-head
 				ul
-					li.id ID
 					li.name NAME
-					li.size SIZE
+					li.number NUMBER
 			each item in data
 				dd.file
 					ul
-						li.id= item.id
 						li.name
 							a(href="/detail/" + item.id)= item.name
-						li.size= item.size
+						li.number= item.number

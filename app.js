@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var cacheControl = require('cache-control-midd');
+
 var routes = require('./routes/index');
 var detail = require('./routes/detail');
 var data = require('./routes/data');
@@ -21,6 +23,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(cacheControl(0));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // add tpls

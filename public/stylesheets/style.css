@@ -1,21 +1,30 @@
 /*base*/
-body {margin:0;font:14px "Lucida Grande", Helvetica, Arial, sans-serif;color:#353535;}
+body {margin:0;font:14px "Lucida Grande", Helvetica, Arial, sans-serif;color:#353535;background:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 a {color:#20BE76;text-decoration:none;}
-a:hover {text-decoration:underline;}
 
 dl, dd, ul, li {margin:0;padding:0;}
 ul, li {list-style:none;}
 
+input {font-size:inherit;border:none 0;}
+
+.txt {padding:8px 5px;}
+
 /*common*/
 .pages {height:100%;overflow:hidden;}
+.page-view {background:#fff;}
 
-.title {margin:0 45px;text-align:center;height:100%;color:#000;}
-.title2 {text-align:left;opacity:1;}
-.back-btn {top:50%;transform:translateY(-50%);position:absolute;width:44px;height:32px;line-height:32px;margin-left:5px;text-align:center;}
-.back-btn:before {content:"";display:inline-block;vertical-align:middle;width:14px;height:14px;margin-bottom:.25em;border:1px solid #666;border-top:none;border-right:none;transform:rotate(45deg);}
+.title {margin:0 36px;text-align:center;height:100%;color:#000;}
+.title2 {text-align:left;opacity:1;color:#20BE76;}
+
+.btn-right, .btn-left {right:.5em;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);position:absolute;min-width:40px;padding:0 5px;height:32px;line-height:32px;text-align:center;}
+.btn-left {left:.5em;right:auto;}
+
+.back-btn {width:40%;text-indent:.3em;text-align:left;}
+.back-btn:before {content:"";display:inline-block;vertical-align:middle;width:12px;height:12px;margin-bottom:.25em;border:1px solid #20BE76;border-top:none;border-right:none;transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+
 
 .page-header {height:50px;line-height:50px;margin-top:-50px;position:relative;background:#f5f5f5;box-shadow:0 0 2px rgba(0,0,0,.5);}
-.page-body {padding:10px;height:100%;box-sizing:border-box;overflow:auto;}
+.page-body {padding:0 10px;height:100%;box-sizing:border-box;overflow:auto;}
 
 .page-view {overflow:hidden;padding-top:50px;box-sizing:border-box;}
 .page-view.slide.in .page-header .title {opacity:.4;}
@@ -23,23 +32,25 @@ ul, li {list-style:none;}
 .page-view.slide.in .page-header .back-btn {opacity:.4;}
 
 .page-view.slide.init .page-header .title {opacity:inherit;}
-.page-view.slide.init .page-header .title2 {animation:none;}
+.page-view.slide.init .page-header .title2 {-webkit-animation:none;animation:none;}
 .page-view.slide.init .page-header .back-btn {opacity:inherit;}
 
-.page-view.slide.out .page-header .title {opacity:.5;}
-.page-view.slide.out .page-header .back-btn {opacity:.5;}
+.page-view.slide.out .page-header > * {opacity:0;}
 
 /*files*/
 .files {}
-.files li, .file-detail li {display:inline-block;vertical-align:top;width:33.3%;height:45px;line-height:45px;text-indent:1em;border-bottom:1px solid #f1f1f1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.files .id {width:20%;}
-.files .name, .files .size {width:40%;}
+.files li, .file-detail li {display:inline-block;vertical-align:top;width:33.3%;height:45px;line-height:45px;text-indent:.5em;border-bottom:1px solid #f1f1f1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.files .name {width:40%;}
+.files .number {width:60%;}
 .files .name a {display:inline-block;height:100%;padding-right:10px;text-indent:0;}
 
 .files .files-head {font-weight:bold;}
 
 .file-detail .head {width:30%;font-weight:bold;}
 .file-detail .body {width:70%;}
+
+.file-edit .body {text-indent:0;overflow:visible;}
+.file-edit .body .txt {width:100%;box-sizing:border-box;}
 
 
 @-webkit-keyframes slideopain {

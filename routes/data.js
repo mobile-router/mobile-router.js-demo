@@ -12,4 +12,9 @@ router.get('/detail/:id', function(req, res, next) {
   res.send(detailModel(req.params.id));
 });
 
+router.post('/updateDetail', function(req, res, next) {
+  // update data
+  res.send({});
+});
+
 module.exports = router;

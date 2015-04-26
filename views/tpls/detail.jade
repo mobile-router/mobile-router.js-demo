@@ -1,14 +1,12 @@
 header.page-header
-	h3.title.title2 Detail
-	a.back-btn(href="/" data-rel="back")
+	h3.title.title2 Contacts
+	a.btn-left.back-btn(href="/" data-rel="back")
+	a.btn-right(href="javascript:;" data-href="/edit/" + data.id) Edit
 .page-body
 	.file-detail
 		ul
-			li.head ID :
-			li.body= data.id
-		ul
-			li.head NAME :
+			li.head NAME
 			li.body= data.name
 		ul
-			li.head SIZE :
-			li.body= data.size
+			li.head NUMBER
+			li.body= data.number

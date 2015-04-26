@@ -39,10 +39,11 @@ html
     //- 避免百度这样的玩意转码
     meta(http-equiv="Cache-Control" content="no-siteapp")
     
-    link(rel='stylesheet', href='http://demo.aijc.net/js/M/build/m.css')
-    link(rel='stylesheet', href='http://demo.aijc.net/js/M/build/m.animate.css')
+    link(rel='stylesheet', href='/stylesheets/m.css')
+    link(rel='stylesheet', href='/stylesheets/m.animate.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(data-main="/javascripts/app/main" src="/javascripts/lib/require.js")
+    //- base(href="/")
   body
     .pages
       block content

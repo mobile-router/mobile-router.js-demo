@@ -11,7 +11,7 @@ define(['service'], function(service) {
   }
 
   function render(cb) {
-    service.getDetailContent(this.params.id, cb)
+    service.getContactsContent(cb)
   }
 
   return {
@@ -19,5 +19,5 @@ define(['service'], function(service) {
     controller: controller,
     destroy: destroy
   };
-  
+
 });
