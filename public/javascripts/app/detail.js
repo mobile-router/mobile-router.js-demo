@@ -1,4 +1,4 @@
-define(['service'], function(service) {
+define(['service', 'zepto'], function(service, $) {
 
   function controller() {
     if (this.cached) return;

@@ -17,7 +17,6 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
         // to detail
         M.router.hideLoading();
         M.router.navigate('/detail/' + data.id, {
-          rel: 'back',
           cacheTemplate: false
         });
       })
