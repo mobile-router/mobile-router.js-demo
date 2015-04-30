@@ -41,7 +41,9 @@
 	};
 	var getHash = function(loc) {
 		if (!loc) loc = location;
-		return loc.hash.substr(1);
+		var hash = loc.hash;
+		if (hash.charAt(0) === '#') hash = hash.substr(1);
+		return hash;
 	};
 	// 解析location或者a信息
 	var parseLocation = function(loc) {
@@ -411,7 +413,7 @@
 		},
 
 		Array: {
-			/*只有当前数组不存在此元素时只添加它*/
+			/*只有当前数组不存在此元素时才添加它*/
 			ensure: function(target, item) {
 				if (target.indexOf(item) === -1) {
 					return target.push(item);
@@ -860,6 +862,8 @@
 	// 是否已初始化
 	var inited = false;
 	
+	var defViewClass = 'page-view';
+
 	// 默认配置
 	var defOptions = {
 
@@ -869,8 +873,8 @@
 		/*views容器选择器*/
 		viewsSelector: '',
 
-		/*view的class*/
-		viewClass: 'page-view',
+		/*view的class 默认都会有 page-view 的 class */
+		viewClass: '',
 
 		/*是否有动画*/
 		animation: true,
@@ -1116,7 +1120,7 @@
 					// 缓存模板
 					var cacheTemplate = this.getOption(el, options.state, 'cacheTemplate');
 					if (options.first) {
-						var initView = M.document.getElementsByClassName(this.options.viewClass)[0];
+						var initView = M.document.getElementsByClassName(defViewClass)[0];
 						if (initView) {
 							templateCache[el.path] = initView.innerHTML;
 							cacheTemplate = true;
@@ -1193,7 +1197,7 @@
 			var nowView;
 			var id = M.getUIDByKey(state.path);
 			if (first) {
-				nowView = M.document.getElementsByClassName(routerOptions.viewClass)[0];
+				nowView = M.document.getElementsByClassName(defViewClass)[0];
 			}
 			
 			var enterClass = 'in';
@@ -1223,7 +1227,7 @@
 
 			// 重置class
 			M.removeClass(_pageViewEle, allClass);
-			M.addClass(_pageViewEle, routerOptions.viewClass);
+			M.addClass(_pageViewEle, defViewClass + ' ' + routerOptions.viewClass);
 
 			var animation = routerOptions.animation;
 
@@ -1409,6 +1413,14 @@
 				}
 				match[j] = stateObj.params[key.name] = val;
 			}
+		},
+
+		/**
+		 * 获取模板缓存对象
+		 * @return {Object} 模板缓存对象
+		 */
+		getTemplateCache: function() {
+			return templateCache;
 		},
 
 		/**
