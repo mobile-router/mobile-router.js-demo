@@ -1,6 +1,6 @@
 {
   "name": "mobile-router.js-demo",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "A mobile-router.js demo",
   "scripts": {
     "start": "node ./bin/www"
