@@ -1,0 +1,144 @@
+{
+    "data": [
+        {
+            "appId": 100053,
+            "displayName": "天天快报",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/02f435332623ca6898074bfb7d19131478240f484",
+            "publisherName": "深圳市腾讯计算机系统有限公司北京分公司",
+            "ratingScore": 8
+        },
+        {
+            "appId": 5,
+            "displayName": "蘑菇街-峰狂送礼",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0e7244013b8189b10662c65e31e8fa9818540895d",
+            "publisherName": "杭州卷瓜网络有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 106081,
+            "displayName": "COK列王的纷争",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/055c54dea808075b88ffe2ad8808545994243b9cf",
+            "publisherName": "北京智明星通科技有限公司",
+            "ratingScore": 8
+        },
+        {
+            "appId": 108755,
+            "displayName": "时间树日历TimeTree",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/043da4411cf1abc667fdfa32f13f5303a9e424365",
+            "publisherName": "JUBILEE WORKS, Inc.",
+            "ratingScore": 6
+        },
+        {
+            "appId": 92486,
+            "displayName": "小米德州扑克-送话费",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0ef95f42d4ba34b692c7a3bd3b10c5c724911bfd9",
+            "publisherName": "成都西米互动科技有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 63447,
+            "displayName": "美拍",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/d8f3d719-4081-47c2-8dbc-37f523ce6bd8",
+            "publisherName": "厦门美图之家科技有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 1213,
+            "displayName": "1号店",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/069c44438a334456b32d62b2bf5c260005d6b80d3",
+            "publisherName": "纽海信息技术（上海）有限公司",
+            "ratingScore": 3
+        },
+        {
+            "appId": 9037,
+            "displayName": "猫眼电影",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0ecd75b55888395391756263bc733a02da940dd90",
+            "publisherName": "北京三快科技有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 66183,
+            "displayName": "西游降魔篇3D",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0df1c45c4bc334bef1c62f03fded3e800d9eb2a0c",
+            "publisherName": "小米游戏",
+            "ratingScore": 8
+        },
+        {
+            "appId": 98448,
+            "displayName": "3D狂野飞车-最高通缉",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0216e554037af5ea767556025ad8074cf254055f1",
+            "publisherName": "北京巨摩科技有限公司",
+            "ratingScore": 6
+        },
+        {
+            "appId": 105420,
+            "displayName": "花儿",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0ca1c4a0ef6462b64610e42f79c11e32f084199a0",
+            "publisherName": "八秒网络",
+            "ratingScore": 8
+        },
+        {
+            "appId": 106167,
+            "displayName": "最美自拍",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/00a3d537f04c974fa6f5a2c86e14d7fdd23421df9",
+            "publisherName": "成都品果科技有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 10507,
+            "displayName": "折800-1折包邮",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0ba755d69e917dada7baf3bcd328c3dd61f424a74",
+            "publisherName": "团博百众（北京）科技有限公司",
+            "ratingScore": 8
+        },
+        {
+            "appId": 90026,
+            "displayName": "多说英语",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0a6c74fecfbbeb56df8417c1cac5c6dc6f943696e",
+            "publisherName": "北京大生在线科技有限公司",
+            "ratingScore": 10
+        },
+        {
+            "appId": 97586,
+            "displayName": "花千骨",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0630325c4d83543d13cf4bf787ebeca39d839e581",
+            "publisherName": "北京爱奇艺",
+            "ratingScore": 8
+        },
+        {
+            "appId": 12289,
+            "displayName": "驴妈妈旅游-1元游",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/04f6fb46de53d4c203a474eee542be939c15853ba",
+            "publisherName": "上海驴途信息科技有限公司",
+            "ratingScore": 10
+        },
+        {
+            "appId": 2469,
+            "displayName": "途牛旅游-暑假出游",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/0a90e4d3c6e22811ef0db0e4135da52039943dc62",
+            "publisherName": "南京途牛科技有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 98,
+            "displayName": "美团",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/4cf54e7b-5ba9-420b-9277-5725ebf6a68b",
+            "publisherName": "北京三快科技有限公司",
+            "ratingScore": 9
+        },
+        {
+            "appId": 96200,
+            "displayName": "FitTime",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/030eee4801da748dc36c4273bdc311bc6dfce1277",
+            "publisherName": "北京飞拓互联科技有限公司",
+            "ratingScore": 10
+        },
+        {
+            "appId": 109396,
+            "displayName": "宝宝认声音",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/002d242ffdefac13fbd00f29329b371d57943e171",
+            "publisherName": "宝宝巴士（福建）网络科技有限公司",
+            "ratingScore": 5
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+/*base*/
+body {margin:0;font:14px "Lucida Grande", Helvetica, Arial, sans-serif;color:#353535;background:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a {color:#20BE76;text-decoration:none;}
+
+dl, dd, ul, li {margin:0;padding:0;}
+ul, li {list-style:none;}
+
+input {font-size:inherit;border:none 0;}
+
+.txt {padding:8px 5px;}
+
+/*common*/
+.pages {height:100%;overflow:hidden;}
+.page-view {background:#fff;}
+
+.title {margin:0 36px;text-align:center;height:100%;color:#000;}
+.title2 {text-align:left;opacity:1;color:#20BE76;}
+
+.btn-right, .btn-left {right:.5em;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);position:absolute;min-width:40px;padding:0 5px;height:32px;line-height:32px;text-align:center;}
+.btn-left {left:.5em;right:auto;}
+
+.back-btn {width:40%;text-indent:.3em;text-align:left;}
+.back-btn:before {content:"";display:inline-block;vertical-align:middle;width:12px;height:12px;margin-bottom:.25em;border:1px solid #20BE76;border-top:none;border-right:none;transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+
+
+.page-header {z-index:1;height:50px;line-height:50px;margin-top:-50px;position:relative;background:#f5f5f5;box-shadow:0 0 2px rgba(0,0,0,.5);}
+.page-body {padding:0 10px;height:100%;box-sizing:border-box;overflow:auto;}
+
+.page-view {overflow:hidden;padding-top:50px;box-sizing:border-box;}
+
+/*nav*/
+.nav {padding:0 10px;text-align:center;line-height:30px;margin-top:2px;}
+.nav a {display:inline-block;padding:8px 15px;color:#555;}
+.nav a.active {color:#20BE76;}
+
+/*list*/
+.list {margin:0 10px;}
+.list li {padding:8px 0;position:relative;}
+.list li .download {position:absolute;right:10px;padding:4px 10px;margin-top:18px;border:1px solid #999;background:#eee;border-radius:4px;}
+.list li .cont {display:block;margin-right:80px;}
+.list li img {width:62px;height:62px;float:left;}
+.list li .des {margin-left:78px;height:62px;}
+.list li .des p {overflow:hidden;margin:0;text-overflow:ellipsis;white-space:nowrap;color:#999;}
+.list li .des h3 {color:#000;margin:1em 0;}

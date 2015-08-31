@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var cacheControl = require('cache-control-midd');
 
 var routes = require('./routes/index');
+var v2 = require('./routes/v2');
 var detail = require('./routes/detail');
 var data = require('./routes/data');
 
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views/tpls')));
 
 app.use('/', routes);
+app.use('/v2', v2);
 app.use('/detail', detail);
 app.use('/data', data);
 
