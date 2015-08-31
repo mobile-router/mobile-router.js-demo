@@ -8,14 +8,14 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
     // Done
     var ele = $(this.element);
     ele.find('.page-header .btn-right').click(function() {
-      M.router.$routeView.showLoading();
+      M.router.routeView.showLoading();
       service.saveDetailInfo({
         id: that.params.id,
         name: ele.find('.txt[name="name"]').val(),
         number: ele.find('.txt[name="number"]').val()
       }, function(data) {
         // to detail
-        M.router.$routeView.hideLoading();
+        M.router.routeView.hideLoading();
         M.router.navigate('/detail/' + data.id, {
           cacheTemplate: false
         });
