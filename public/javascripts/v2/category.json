@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "name": "游戏",
+            "key": "game",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/c0aae4df-9cf8-4217-9082-c1075645214f"
+        },
+        {
+            "name": "实用工具",
+            "key": "tool",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/5c17c7ce-bdf2-4d1f-adcf-b8f3b2455a03"
+        },
+        {
+            "name": "影音视听",
+            "key": "audio",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/fc75fa79-8fe3-4753-aa38-3a660fb33c77"
+        },
+        {
+            "name": "聊天与社交",
+            "key": "social",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/f3de4741-a547-4759-b942-fab2ba9018b2"
+        },
+        {
+            "name": "图书与阅读",
+            "key": "book",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/9e2fb545-3d05-4c1d-8273-896af535eec3"
+        },
+        {
+            "name": "学习与教育",
+            "key": "learn",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/fca3becd-2513-4d15-af50-4dfb00a2db63"
+        },
+        {
+            "name": "效率办公",
+            "key": "office",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/7d920ac5-8dea-40bb-9484-68b7ed3bca68"
+        },
+        {
+            "name": "时尚与购物",
+            "key": "shopping",
+            "icon": "http://file.market.xiaomi.com/thumbnail/PNG/l96/AppStore/807efdaf-a94a-43de-841c-31142ffc6680"
+        }
+    ]
+}

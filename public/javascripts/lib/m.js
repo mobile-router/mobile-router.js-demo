@@ -1000,7 +1000,7 @@
 		getTemplateCb: function(routeIns, template, cb) {
 			this.hideLoading();
 			routeIns._oldTemplate = this.templateCache[routeIns.path];
-			this.templateCache[routeIns.path] = template;
+			this.templateCache[routeIns.path] = template || '';
 
 			var that = this;
 			var options = routeIns.options; // 带过来的options
@@ -1339,7 +1339,7 @@
 
 		// parse opts
 		M.each([
-			'cacheTemplate', 'viewClass', 'redirectTo', 'redirectPushState',
+			'cacheTemplate', 'animation', 'aniClass', 'redirectTo', 'redirectPushState',
 			'callback', 'getTemplate', 'onActive', 'onDestroy', 'onEnter', 'onLeave',
 			'regexp', '$regexp', 'keys', 'parentArgsLen'
 		], function(k) {

@@ -13,33 +13,32 @@ require.config({
   }
 });
 
-require(['m.router', 'fastclick', 'index'], function(M, fastclick, index) {
+require([
+  'm.router',
+  'fastclick',
+  'index',
+  'category',
+  'search',
+  'detail'
+], function(M, fastclick, index, category, search, detail) {
 
   M.router.init([
     {
       path: '/',
       getTemplate: index.getHeader,
       redirectTo: '/rec',
-      redirectPushState: false,
 
       children: {
         routes: [
           {
-            path: '/rec',
-            getTemplate: index.render,
-            onEnter: index.onEnter,
-            callback: index.controller,
-            onDestroy: index.destroy
-          },
-          {
-            path: '/top',
-            getTemplate: index.render,
-            onEnter: index.onEnter,
-            callback: index.controller,
-            onDestroy: index.destroy
-          },
-          {
             path: '/category',
+            getTemplate: index.getCategoryTpl,
+            onEnter: index.onEnter,
+            callback: index.callback,
+            onDestroy: index.destroy
+          },
+          {
+            path: '/{type:(rec|top)}',
             getTemplate: index.render,
             onEnter: index.onEnter,
             callback: index.controller,
@@ -47,6 +46,30 @@ require(['m.router', 'fastclick', 'index'], function(M, fastclick, index) {
           }
         ]
       }
+    },
+    {
+      path: '/category/:key',
+      getTemplate: category.render,
+      onEnter: category.onEnter,
+      callback: category.controller,
+      onDestroy: category.destroy
+    },
+    {
+      path: '/search',
+      cacheTemplate: false,
+      aniClass: 'slideup',
+      getTemplate: search.render,
+      onEnter: search.onEnter,
+      callback: search.controller,
+      onDestroy: search.destroy
+    },
+    {
+      path: '/detail/:appId',
+      cacheTemplate: false,
+      getTemplate: detail.render,
+      onEnter: detail.onEnter,
+      callback: detail.controller,
+      onDestroy: detail.destroy
     }
   ], {
     viewsSelector: '.pages',
