@@ -14,7 +14,7 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
 
   function render(cb) {
     var lastState = M.history.getPrevState();
-    var h = service.getDetailHeader('搜索结果', lastState && lastState.url || '', true);
+    var h = service.getDetailHeader('搜索结果', lastState || '', true);
     cb(h + service.getSearchBody());
   }
 

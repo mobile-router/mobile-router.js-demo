@@ -14,7 +14,7 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
 
   function render(cb) {
     var lastState = M.history.getPrevState();
-    var h = service.getDetailHeader('详情页', lastState && lastState.url || '');
+    var h = service.getDetailHeader('详情页', lastState || '');
     cb(h + service.getDetailBody(this.params.appId));
   }
 

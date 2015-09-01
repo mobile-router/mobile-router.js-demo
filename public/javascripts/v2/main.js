@@ -26,7 +26,11 @@ require([
     {
       path: '/',
       getTemplate: index.getHeader,
-      redirectTo: '/rec',
+      redirectTo: function() {
+        var to = this.options.state.data.to || '/rec';
+        return to;
+      },
+      redirectPushState: false,
 
       children: {
         routes: [

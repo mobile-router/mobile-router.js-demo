@@ -9,7 +9,7 @@ define(['zepto'], function($) {
     $.each(data, function(_, d) {
       r.push(
         '<li>' +
-          '<a href="http://m.app.mi.com//download/'+d.appId+'" target="_blank" class="download">下载</a>' +
+          '<a href="http://m.app.mi.com/download/'+d.appId+'" target="_blank" class="download">下载</a>' +
           '<a href="detail/' + d.appId + '" class="cont">' +
             '<img src="'+d.icon+'">' +
             '<div class="des">' +
@@ -27,9 +27,9 @@ define(['zepto'], function($) {
   function getIndexHeader() {
     return commonHeader(
       '<div class="nav">' +
-        '<a href="rec">精品</a>' +
-        '<a href="top">排行</a>' +
-        '<a href="category">分类</a>' +
+        '<a href="#" data-href="rec">精品</a>' +
+        '<a href="#" data-href="top">排行</a>' +
+        '<a href="#" data-href="category">分类</a>' +
       '</div>'
     );
   }
@@ -74,10 +74,24 @@ define(['zepto'], function($) {
     });
   }
 
-  function getDetailHeader(title, backUrl, inSearch) {
+  function getDetailHeader(title, backState, inSearch) {
+    var dataUrl = '';
+    var url = '';
+    if (typeof backState == 'string') {
+      url = backState;
+    } else {
+      if (backState.data.href) {
+        dataUrl = backState.data.href;
+        url = '';
+      } else {
+        url = backState.url;
+      }
+    }
     var h = commonHeader(
       '<h3 class="title title2">'+title+'</h3>' +
-      '<a href="' +backUrl+ '" data-rel="back" class="btn-left back-btn"></a>' +
+      '<a href="' +url+ '"' +
+        (dataUrl ? ' data-to="' + dataUrl + '" ': ' ') +
+        'data-rel="back" class="btn-left back-btn"></a>' +
       (inSearch ? '' : '<a href="search" class="btn-right">Search</a>')
     );
     return h;

@@ -11,7 +11,7 @@ define(['service', 'zepto'], function(service, $) {
   function checkNav(h) {
     var nav = $('.nav');
     nav.find('a').removeClass('active');
-    nav.find('a[href="'+h+'"]').addClass('active');
+    nav.find('a[data-href="'+h+'"]').addClass('active');
   }
 
   function destroy() {

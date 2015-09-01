@@ -14,7 +14,11 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
 
   function render(cb) {
     service.getCategory(this.params.key, function(category) {
-      var h = service.getDetailHeader(category.name, 'category');
+      var h = service.getDetailHeader(category.name, {
+        data: {
+          href: 'category'
+        }
+      });
       service.getIndexContent(function(bdy) {
         cb(h + bdy);
       });
