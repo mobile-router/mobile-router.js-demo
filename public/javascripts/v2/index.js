@@ -1,6 +1,7 @@
 define(['service', 'zepto'], function(service, $) {
 
   function controller() {
+    console.log('index controller', this);
     if (this.cached) return;
   }
 
@@ -15,7 +16,7 @@ define(['service', 'zepto'], function(service, $) {
   }
 
   function destroy() {
-    // destroy something
+    console.log('index destroy', this);
   }
 
   function render(cb) {

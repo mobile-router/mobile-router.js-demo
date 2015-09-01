@@ -1,6 +1,7 @@
 define(['service', 'zepto', 'm.router'], function(service, $, M) {
 
   function controller() {
+    console.log('category controller', this);
     if (this.cached) return;
   }
 
@@ -9,7 +10,7 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
   }
 
   function destroy() {
-    // destroy something
+    console.log('category destroy', this);
   }
 
   function render(cb) {

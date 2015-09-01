@@ -839,10 +839,10 @@
 				if (args) {
 					_path = args.shift();
 					routeIns = el.ins(_path, query || {}, args, options);
-					var p = that, pr, element;
+					var p = that, pr, activeIns;
 					while (p && (pr = p.$parentRoute)) {
-						element = pr.ele();
-						if (!that.viewsContainer || !element || !pr.actived()) {
+						activeIns = pr.getActive();
+						if (!that.viewsContainer || !activeIns || routeIns.path.match(pr.$regexp)[0]!=activeIns.path) {
 							// 初始化 但是默认匹配到的是 子路由 需要初始化 父路由
 							that.$parent.route(routeIns.path, routeIns.query, M.extend({matchIns: routeIns}, options), path, function() {
 								delete that.$parent.pageViewState.options.matchIns;
@@ -1176,7 +1176,7 @@
 				// reflow
 				ele.offsetWidth = ele.offsetWidth;
 				doCallback(pageViewState, 'onLeave');
-				pageViewState.route.actived(false);
+				pageViewState.route.setActive(-1);
 			}
 			
 			if (_pageViewEle) {
@@ -1227,9 +1227,9 @@
 				if (!_pageViewEle) {
 					endCall && endCall();
 					checkPageViews();
-					var curIndex = M.Array.indexOfByKey(that.pagesCache, that.pageViewState, 'path');
-					curIndex >= 0 && that.pagesCache.splice(curIndex, 1);
-					that.pageViewState.route.destroyIns(that.pageViewState);
+					// var curIndex = M.Array.indexOfByKey(that.pagesCache, that.pageViewState, 'path');
+					// curIndex >= 0 && that.pagesCache.splice(curIndex, 1);
+					// that.pageViewState.route.destroyIns(that.pageViewState);
 					that.pageViewState = null;
 					that.defaultTemplate && M.innerHTML(that.viewsContainer, that.defaultTemplate);
 					return;
@@ -1344,7 +1344,6 @@
 		this.instances = [];
 		this.path = path;
 		this.activeIndex = -1;
-		this._actived = false;
 
 		// parse opts
 		M.each([
@@ -1413,7 +1412,6 @@
 
 		setActive: function(index) {
 			this.activeIndex = index;
-			this.actived(this.getIns(index));
 		},
 
 		setRouteView: function(routeView) {
@@ -1423,11 +1421,6 @@
 		ele: function() {
 			var ins = this.getActive() || null;
 			return ins && ins.element;
-		},
-
-		actived: function(v) {
-			if (M.isUndefined(v)) return this._actived;
-			this._actived = !!v;
 		},
 
 		destroyIns: function(ins) {
