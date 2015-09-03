@@ -712,8 +712,8 @@
 				// 已存在
 				i = urlCache.indexOf(url);
 			} else {
-				urlCache.push(url);
-				i = urlCache.length - 1;
+				i = this.index + 1;
+				urlCache.splice(i, 0, url);
 			}
 			stateCache[url] = M.extend(true, stateCache[url], state);
 			this.clearCache(i);
@@ -726,11 +726,12 @@
 		 */
 		clearCache: function(index) {
 			if (M.isUndefined(index)) index = -1;
-			var clearUrls = urlCache.slice(index + 1);
+			var num = index + 5;
+			var clearUrls = urlCache.slice(num);
 			clearUrls.forEach(function(url) {
 				delete stateCache[url];
 			});
-			urlCache.length = index + 1;
+			if (urlCache.length > num) urlCache.length = num;
 		},
 
 		/**
@@ -842,7 +843,7 @@
 					var p = that, pr, activeIns;
 					while (p && (pr = p.$parentRoute)) {
 						activeIns = pr.getActive();
-						if (!that.viewsContainer || !activeIns || routeIns.path.match(pr.$regexp)[0]!=activeIns.path) {
+						if (!that.viewsContainer || !activeIns || !activeIns.isParentOf(routeIns.path)) {
 							// 初始化 但是默认匹配到的是 子路由 需要初始化 父路由
 							that.$parent.route(routeIns.path, routeIns.query, M.extend({matchIns: routeIns}, options), path, function() {
 								delete that.$parent.pageViewState.options.matchIns;
@@ -1176,7 +1177,9 @@
 				// reflow
 				ele.offsetWidth = ele.offsetWidth;
 				doCallback(pageViewState, 'onLeave');
-				pageViewState.route.setActive(-1);
+				if (pageViewState.route.getActive() === pageViewState) {
+					pageViewState.route.setActive(-1);
+				}
 			}
 			
 			if (_pageViewEle) {
@@ -1227,9 +1230,6 @@
 				if (!_pageViewEle) {
 					endCall && endCall();
 					checkPageViews();
-					// var curIndex = M.Array.indexOfByKey(that.pagesCache, that.pageViewState, 'path');
-					// curIndex >= 0 && that.pagesCache.splice(curIndex, 1);
-					// that.pageViewState.route.destroyIns(that.pageViewState);
 					that.pageViewState = null;
 					that.defaultTemplate && M.innerHTML(that.viewsContainer, that.defaultTemplate);
 					return;
@@ -1299,7 +1299,8 @@
 		destroyRouteIns: function(routeIns) {
 			var route = routeIns.route;
 			var routeView = route.routeView;
-			if (routeView) {
+			var nowRoute = this.pageViewState && this.pageViewState.route;
+			if (routeView && (!routeView.pageViewState || route !== nowRoute)) {
 				// destroy child
 				var ins = routeView.pagesCache.shift();
 				while (ins) {
@@ -1308,8 +1309,8 @@
 				}
 				// routeView.templateCache = {};
 				routeView.pageViewState = null;
-				if (routeView.$parentRoute.ele() != this.pageViewState.element) {
-					routeView.setViewsContainer();
+				if (!nowRoute || route.ele() != this.pageViewState.element) {
+					routeView.setViewsContainer(null);
 				}
 				removeEle(routeView.maskEle);
 				routeView.maskEle = null;
@@ -1488,6 +1489,17 @@
 			if (parsed && this.route.checkEqual(this, parsed.path, parsed.query)) {
 				update && (this.query = parsed.query);
 				return true;
+			}
+			return false;
+		},
+
+		isParentOf: function(path) {
+			var reg = this.route.$regexp;
+			if (reg) {
+				var ret = path.match(reg);
+				if (ret && ret[0] === this.path) {
+					return true;
+				}
 			}
 			return false;
 		},

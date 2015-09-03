@@ -1,6 +1,7 @@
 define(['service', 'zepto', 'm.router'], function(service, $, M) {
 
   function controller() {
+    console.log('edit controller', this, arguments);
     if (this.cached) return;
     
     var that = this;
@@ -24,6 +25,7 @@ define(['service', 'zepto', 'm.router'], function(service, $, M) {
   }
 
   function destroy() {
+    console.log('edit destroy', this, arguments);
     // destroy something
   }
 

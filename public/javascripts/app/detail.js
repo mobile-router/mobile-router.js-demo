@@ -1,12 +1,13 @@
 define(['service', 'zepto'], function(service, $) {
 
   function controller() {
+    console.log('detail controller', this, arguments);
     if (this.cached) return;
-    console.log(this, arguments);
     // do something
   }
 
   function destroy() {
+    console.log('detail destroy', this, arguments);
     // destroy something
   }
 

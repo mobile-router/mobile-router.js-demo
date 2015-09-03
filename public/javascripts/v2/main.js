@@ -38,7 +38,7 @@ require([
             path: '/category',
             getTemplate: index.getCategoryTpl,
             onEnter: index.onEnter,
-            callback: index.callback,
+            callback: index.controller,
             onDestroy: index.destroy
           },
           {
