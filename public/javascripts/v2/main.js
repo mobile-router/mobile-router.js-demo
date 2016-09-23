@@ -84,6 +84,8 @@ require([
 
   fastclick.attach(M.body);
 
-  M.history.start();
+  M.history.start({
+    history: true
+  });
 
 });
