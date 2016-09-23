@@ -44,6 +44,8 @@ require(['m.router', 'fastclick', 'contacts', 'detail', 'edit'], function(M, fas
 
   fastclick.attach(M.body);
 
-  M.history.start();
+  M.history.start({
+    history: true
+  });
 
 });
